@@ -399,6 +399,12 @@ a:focus-visible {
   padding-bottom: 60px;
 }
 
+.footer-container {
+  display: flex;
+}
+.footer-inner-adress {
+  margin-right: 70px;
+}
 .logo-footer {
   color: var(--color-logo-footer-secondary);
 }
@@ -406,8 +412,11 @@ a:focus-visible {
 .footer-text {
   font-style: normal;
   margin-top: 20px;
-  line-height: 1.7;
+  line-height: 1.71;
   color: var(--color-primary-dark);
+}
+.footer-list {
+  width: 231px;
 }
 .footer-list-item:not(:last-child) {
   margin-bottom: 9px;
@@ -421,6 +430,29 @@ a:focus-visible {
   color: var(--color-nav-active);
 }
 
+.footer-inner-link {
+  margin-top: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.17;
+  color: var(--color-primary-dark);
+}
+.footer-inner-link > .social-links {
+  margin-top: 20px;
+  fill: currentColor;
+}
+.footer-inner-link .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primary-dark);
+}
+.footer-inner-link .social-link:hover,
+.footer-inner-link .social-link:focus {
+  background-color: var(--color-nav-active);
+}
+
+.footer-inner-link .social-link-icon {
+  fill: currentColor;
+}
 /* portfolio */
 .gallery {
   padding-top: 94px;
@@ -454,23 +486,30 @@ a:focus-visible {
 .gallery-button:focus {
   background-color: var(--bgc-portfolio-button-hover);
   color: var(--color-portfolio-button-hover);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 /* галерея */
 .gallery-card-list {
   display: flex;
   flex-wrap: wrap;
 }
-.gallery-card-item {
+.gallery-card-link {
   /* max-width: 370px; */
+  display: block;
   text-align: left;
 }
 .gallery-card-item:not(:nth-child(3n + 1)) {
   margin-left: 30px;
 }
+.gallery-card-link:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
 .gallery-card-item:nth-child(-n + 6) {
   margin-bottom: 30px;
 }
-.gallery-card-item > img {
+.gallery-card-item img {
   display: block;
 }
 .gallery-card-desc {
@@ -491,6 +530,7 @@ a:focus-visible {
 .gallery-card-text {
   font-size: 16px;
   line-height: 1.87;
+  color: var(--color-primary-light);
 }
 /* робить елемент невидимим */
 .visually-hidden {
